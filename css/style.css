@@ -706,11 +706,15 @@ input[type="checkbox"]:checked {
     display: inline-block;
 }
 
-.footer__content__social img {
+.footer__content__social a:focus {
+    outline: none;
+}
+
+.footer__content__social__img {
     width: 24px;
     height: 24px;
 }
 
-.footer__content__social img:first-of-type {
+.footer__content__social__img:first-of-type {
     margin-right: 20px;
 }
