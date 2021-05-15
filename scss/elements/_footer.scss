@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-light-grey);
+  background-color: $color-light-grey;
   box-shadow: 0 -5px 40px #00000029;
   height: 90px;
   width: 100%;
@@ -14,18 +14,18 @@
 }
 
 .footer__logo {
-  font-family: var(--raleway);
-  font-weight: var(--font-light);
+  font-family: $raleway;
+  font-weight: $font-light;
   font-size: 26px;
-  color: var(--color-primary);
+  color: $color-primary;
   line-height: 30px;
 }
 
 .footer__copyright {
-  font-family: var(--open-sans);
-  font-weight: var(--font-regular);
+  font-family: $open-sans;
+  font-weight: $font-regular;
   font-size: 11px;
-  color: var(--color-grey);
+  color: $color-grey;
   line-height: 15px;
 }
 

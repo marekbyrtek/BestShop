@@ -1,3 +1,19 @@
+@mixin small-screen {
+  @media (max-width: 1146px) {
+    @content
+  }
+}
+@mixin tablet {
+  @media (max-width: 860px) {
+    @content
+  }
+}
+@mixin phone {
+  @media (max-width: 440px) {
+    @content
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,4 +26,8 @@ a {
   max-width: 1352px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1352px) {
+    padding: 0 15px;
+  }
 }

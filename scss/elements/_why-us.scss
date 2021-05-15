@@ -1,7 +1,11 @@
 .why-us {
   padding: 100px 0;
-  background-color: var(--color-white);
+  background-color: $color-white;
   box-shadow: 0 -5px 80px #00000029;
+
+  @include phone {
+    padding: 50px 0 20px;
+  }
 }
 
 .why-us__container {
@@ -11,23 +15,35 @@
 }
 
 .why-us__header {
-  font-family: var(--raleway);
-  font-weight: var(--font-regular);
+  font-family: $raleway;
+  font-weight: $font-regular;
   font-size: 36px;
-  color: var(--color-black);
+  color: $color-black;
   text-align: center;
   margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
 }
 
 .why-us__content {
   display: flex;
   justify-content: space-around;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .why-us__article {
   text-align: center;
   position: relative;
   z-index: 1;
+
+  @include phone {
+    margin-bottom: 30px;
+  }
 }
 
 .why-us__article::before {
@@ -39,22 +55,30 @@
   position: absolute;
   z-index: -1;
   left: 25%;
+
+  @include phone {
+    left: 37%;
+  }
 }
 
 .why-us__article--red::before {
-  background-color: var(--color-redish);
+  background-color: $color-redish;
 }
 
 .why-us__article--blue::before {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
 }
 
 .why-us__article--green::before {
-  background-color: var(--color-green);
+  background-color: $color-green;
 }
 
 .why-us__article__img {
   padding-left: 40%;
+
+  @include phone {
+    padding: 0;
+  }
 }
 
 .why-us__article__img--eye {
@@ -63,18 +87,18 @@
 }
 
 .why-us__article__header {
-  font-family: var(--raleway);
-  font-weight: var(--font-extra-bold);
+  font-family: $raleway;
+  font-weight: $font-extra-bold;
   font-size: 20px;
-  color: var(--color-black);
+  color: $color-black;
   letter-spacing: 5.96px;
   margin: 19px 0;
 }
 
 .why-us__article__paragraph {
-  font-family: var(--raleway);
-  font-weight: var(--font-regular);
+  font-family: $raleway;
+  font-weight: $font-regular;
   font-size: 17px;
-  color: var(--color-grey);
+  color: $color-grey;
   line-height: 20px;
 }

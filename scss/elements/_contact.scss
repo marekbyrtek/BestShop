@@ -5,37 +5,58 @@
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1352px) {
+    padding: 50px 15px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phone {
+    align-items: flex-start;
+  }
 }
 
 .contact__info__header {
-  font-family: var(--raleway);
-  font-weight: var(--font-regular);
+  font-family: $raleway;
+  font-weight: $font-regular;
   font-size: 49px;
-  color: var(--color-black);
+  color: $color-black;
   line-height: 57px;
 }
 
 .contact__info__text {
-  font-family: var(--open-sans);
-  font-weight: var(--font-regular);
+  font-family: $open-sans;
+  font-weight: $font-regular;
   font-size: 16px;
-  color: var(--color-black);
+  color: $color-black;
   line-height: 22px;
   margin: 22px 0 42px;
 }
 
 .contact__info__contener {
   display: flex;
-  font-family: var(--open-sans);
+  font-family: $open-sans;
   font-weight: 600;
   font-size: 16px;
-  color: var(--color-grey);
+  color: $color-grey;
   line-height: 22px;
+
+  @include phone {
+    display: block;
+  }
 }
 
 .contact__info__contener__text{
   display: flex;
   align-items: center;
+
+  @include phone {
+    margin-bottom: 15px;
+  }
 }
 
 .contact__info__contener__text:first-of-type {
@@ -43,11 +64,11 @@
 }
 
 .contact__info__contener__text--mail::before {
-  content: url("../images/Mail Icon.svg");
+  content: url("../../images/Mail Icon.svg");
 }
 
 .contact__info__contener__text--phone::before {
-  content: url("../images/Phone Icon.svg");
+  content: url("../../images/Phone Icon.svg");
 }
 
 .contact__info__contener__text::before {
@@ -60,16 +81,19 @@
 .contact__form {
   max-width: calc(896px - 50%);
   width: 100%;
-  padding: 4px 0 0 4px;
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 }
 
 .contact__form__label {
-  font-family: var(--open-sans);
-  font-weight: var(--font-bold);
+  font-family: $open-sans;
+  font-weight: $font-bold;
   font-size: 11px;
-  color: var(--color-primary);
+  color: $color-primary;
   line-height: 15px;
   letter-spacing: 3.28px;
   text-transform: uppercase;
@@ -83,11 +107,11 @@
   height: 3rem;
   padding-top: 1rem;
   border: none;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 1px solid $color-black;
 }
 
 .contact__form__input:focus {
-  border-bottom-color: var(--color-primary);
+  border-bottom-color: $color-primary;
 }
 
 .contact__form__checkbox {
@@ -96,8 +120,8 @@
 
 .contact__form__checkbox {
   display: flex;
-  font-family: var(--open-sans);
-  font-weight: var(--font-regular);
+  font-family: $open-sans;
+  font-weight: $font-regular;
   font-size: 12px;
   color: #707070;
   line-height: 17px;
@@ -113,25 +137,25 @@ input[type="checkbox"] {
   width: 24px;
   margin-top: 4px;
   margin-right: 10px;
-  background-color: var(--color-white);
+  background-color: $color-white;
   border: 1px solid #95989A;
   border-radius: 4px;
 }
 
 input[type="checkbox"]:checked {
-  background-image: url("../images/Checkmark.svg");
+  background-image: url("../../images/Checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .contact__form__btn {
-  font-family: var(--open-sans);
-  font-weight: var(--font-bold);
+  font-family: $open-sans;
+  font-weight: $font-bold;
   font-size: 13px;
-  color: var(--color-white);
+  color: $color-white;
   line-height: 18px;
   padding: 22px 97px;
-  background-color: var(--color-primary);
+  background-color: $color-primary;
   box-shadow: 5px 10px 14px #07ACE629;
   border-radius: 35px;
   align-self: flex-end;

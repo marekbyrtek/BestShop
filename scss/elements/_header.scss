@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  background-color: var(--color-white);
+  background-color: $color-white;
   box-shadow: 0 3px 6px #00000029;
   height: 70px;
   width: 100%;
@@ -20,9 +20,9 @@
 
 .header__logo {
   font-size: 32px;
-  color: var(--color-primary);
-  font-family: var(--raleway);
-  font-weight: var(--font-light);
+  color: $color-primary;
+  font-family: $raleway;
+  font-weight: $font-light;
 }
 
 .header__logo:focus {
@@ -31,13 +31,17 @@
 
 .header__nav {
   display: flex;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .nav__link {
   font-size: 11px;
-  font-family: var(--open-sans);
-  font-weight: var(--font-bold);
-  color: var(--color-grey);
+  font-family: $open-sans;
+  font-weight: $font-bold;
+  color: $color-grey;
   text-transform: uppercase;
   letter-spacing: 3.28px;
   padding: 28px 10px 23px;
@@ -45,8 +49,8 @@
 }
 
 .nav__link:hover {
-  color: var(--color-black);
-  border-color: var(--color-primary);
+  color: $color-black;
+  border-color: $color-primary;
   transition: 0.5s;
 }
 

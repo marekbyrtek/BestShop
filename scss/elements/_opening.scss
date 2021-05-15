@@ -10,31 +10,40 @@
 
 .opening__header {
   font-size: 49px;
-  font-family: var(--raleway);
-  font-weight: var(--font-regular);
-  color: var(--color-black);
+  font-family: $raleway;
+  font-weight: $font-regular;
+  color: $color-black;
 }
 
 .opening__text {
   font-size: 16px;
-  font-family: var(--open-sans);
-  font-weight: var(--font-regular);
-  color: var(--color-black);
+  font-family: $open-sans;
+  font-weight: $font-regular;
+  color: $color-black;
   margin: 20px auto 38px;
+
+  @include phone {
+    max-width: 300px;
+    text-align: center;
+  }
 }
 
 .btn {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
   box-shadow: 5px 10px 14px #07ACE629;
 }
 
 .opening__btn {
   font-size: 16px;
-  font-family: var(--open-sans);
-  font-weight: var(--font-bold);
-  color: var(--color-white);
-  padding: 22px 157px 23px;
+  font-family: $open-sans;
+  font-weight: $font-bold;
+  color: $color-white;
+  padding: 22px 157px;
   border-radius: 40px;
+
+  @include phone {
+    padding: 22px 92px;
+  }
 }
 
 .opening__img {
