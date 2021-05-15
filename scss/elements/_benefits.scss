@@ -1,0 +1,153 @@
+.benefits {
+  background-color: var(--color-light-grey);
+  padding: 105px 0;
+}
+
+.benefist__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1124px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.benefits__article {
+  background-color: var(--color-white);
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 370px;
+}
+
+.benefits__article:nth-of-type(2) {
+  margin: 37px 0;
+}
+
+.benefits__article__content {
+  text-align: left;
+}
+
+.benefits__article__content--left {
+  padding-left: 35px;
+}
+
+.benefits__article__content--right {
+  padding-right: 20px;
+}
+
+.benefits__article__content__header {
+  font-family: var(--raleway);
+  font-weight: var(--font-regular);
+  font-size: 36px;
+  color: var(--color-black);
+  line-height: 42px;
+}
+
+.benefits__article__content__paragraph {
+  font-family: var(--open-sans);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  color: var(--color-black);
+  line-height: 22px;
+  margin-top: 30px;
+}
+.benefits__article__content__paragraph::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 328px;
+  background-color: var(--color-redish);
+  margin-top: 50px;
+}
+
+.benefits__article__content__paragraph--second::after {
+  background-color: var(--color-primary);
+}
+
+.benefits__article__content__paragraph--third::after {
+  background-color: var(--color-green);
+}
+
+.benefits__article--last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 370px;
+}
+
+.benefits__article__content--last {
+  background-color: var(--color-white);
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin-right: 60px;
+  padding: 70px 35px;
+  height: 100%;
+}
+
+.benefits__article__img {
+  position: relative;
+  z-index: 1;
+}
+
+.benefits__article__img--macbook img {
+  max-height: 219px;
+}
+
+.benefits__article__img--iphone img {
+  max-height: 328px;
+}
+
+.benefits__article__img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.benefits__article__img--macbook::before {
+  width: 180px;
+  height: 180px;
+  background-color: var(--color-redish);
+  border-radius: 41px;
+  transform: rotate(45deg);
+  right: 10%;
+  bottom: 30%;
+}
+
+.benefits__article__img--iphone::before {
+  width: 320px;
+  height: 320px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.benefits__article__img--last {
+  background-color: var(--color-green);
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding: 98px 82px 64px 62px;
+  height: 100%;
+}
+
+.benefits__article__img--last>img {
+  max-height: 207px;
+}
+
+.benefits__article__img--macbook {
+  max-height: 219px;
+}
+
+.benefits__article__img--iphone {
+  max-height: 328px;
+}
+
+.benefits__article__img--right {
+  padding: 0 70px 0 170px;
+}
+
+.benefits__article__img--left {
+  padding: 0 170px 0 70px;
+}
