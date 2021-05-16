@@ -415,7 +415,24 @@ a {
 }
 @media (max-width: 860px) {
   .header__nav {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 6px #00000029;
+    border-top: none;
+    width: 100%;
+    padding-bottom: 20px;
+    opacity: 1;
     display: none;
+  }
+  .header__nav .nav__element {
+    padding: 0;
+  }
+  .header__nav .nav__link {
+    display: block;
+    padding: 14px 20px;
   }
 }
 
@@ -435,6 +452,12 @@ a {
   border-color: #08a6e4;
   transition: 0.5s;
 }
+@media (max-width: 860px) {
+  .nav__link:hover {
+    color: #A5A5A5;
+    border: none;
+  }
+}
 
 .nav__element {
   margin: 0 22px;
@@ -442,6 +465,47 @@ a {
 
 .nav__element:last-child {
   margin-right: 0;
+}
+
+.menu__btn {
+  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
+@media (max-width: 860px) {
+  .menu__btn:checked ~ .header__nav {
+    display: flex;
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 5px);
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu__btn:checked ~ .menu__toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+}
+.menu__toggle {
+  display: none;
+}
+.menu__toggle span {
+  width: 20px;
+  height: 2px;
+  display: block;
+  margin-bottom: 3px;
+  background-color: #08a6e4;
+  transition: 0.3s all ease-in-out;
+}
+.menu__toggle span:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 860px) {
+  .menu__toggle {
+    display: block;
+  }
 }
 
 .opening {
@@ -1040,7 +1104,7 @@ a {
 }
 
 .prices__article__info--include::before {
-  content: url("../../images/Ckechmark-1.svg");
+  content: url("../images/Ckechmark-1.svg");
   height: 11px;
   width: 10px;
   display: inline-block;
@@ -1048,7 +1112,7 @@ a {
 }
 
 .prices__article__info--not-include::before {
-  content: url("../../images/Close.svg");
+  content: url("../images/Close.svg");
   height: 11px;
   width: 11px;
   display: inline-block;
@@ -1151,11 +1215,11 @@ a {
 }
 
 .contact__info__contener__text--mail::before {
-  content: url("../../images/Mail Icon.svg");
+  content: url("../images/Mail Icon.svg");
 }
 
 .contact__info__contener__text--phone::before {
-  content: url("../../images/Phone Icon.svg");
+  content: url("../images/Phone Icon.svg");
 }
 
 .contact__info__contener__text::before {
@@ -1231,7 +1295,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked {
-  background-image: url("../../images/Checkmark.svg");
+  background-image: url("../images/Checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

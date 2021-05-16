@@ -33,7 +33,26 @@
   display: flex;
 
   @include tablet {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    flex-direction: column;
+    background-color: $color-white;
+    box-shadow: 0 3px 6px #00000029;
+    border-top: none;
+    width: 100%;
+    padding-bottom: 20px;
+    opacity: 1;
     display: none;
+
+    .nav__element {
+      padding: 0;
+    }
+
+    .nav__link {
+      display: block;
+      padding: 14px 20px;
+    }
   }
 }
 
@@ -52,6 +71,11 @@
   color: $color-black;
   border-color: $color-primary;
   transition: 0.5s;
+
+  @include tablet {
+    color: $color-grey;
+    border: none;
+  }
 }
 
 .nav__element {
@@ -60,4 +84,57 @@
 
 .nav__element:last-child {
   margin-right: 0;
+}
+
+.menu {
+  &__btn {
+    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+
+    @include tablet {
+      &:checked {
+        ~ .header__nav {
+          display: flex;
+        }
+
+        ~ .menu__toggle {
+          span {
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(2px, 5px);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(2px, -5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    span {
+      width: 20px;
+      height: 2px;
+      display: block;
+      margin-bottom: 3px;
+      background-color: $color-primary;
+      transition: 0.3s all ease-in-out;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
 }

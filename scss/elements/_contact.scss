@@ -64,11 +64,11 @@
 }
 
 .contact__info__contener__text--mail::before {
-  content: url("../../images/Mail Icon.svg");
+  content: url("../images/Mail Icon.svg");
 }
 
 .contact__info__contener__text--phone::before {
-  content: url("../../images/Phone Icon.svg");
+  content: url("../images/Phone Icon.svg");
 }
 
 .contact__info__contener__text::before {
@@ -143,7 +143,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  background-image: url("../../images/Checkmark.svg");
+  background-image: url("../images/Checkmark.svg");
+  //background-color: red;
   background-repeat: no-repeat;
   background-position: center;
 }

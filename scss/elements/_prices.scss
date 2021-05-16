@@ -120,10 +120,6 @@
   }
 }
 
-//.prices__article__price--big {
-//  margin-bottom: 61px;
-//}
-
 .prices__article__price::after {
   content: "";
   height: 14px;
@@ -165,7 +161,7 @@
 }
 
 .prices__article__info--include::before {
-  content: url("../../images/Ckechmark-1.svg");
+  content: url("../images/Ckechmark-1.svg");
   height: 11px;
   width: 10px;
   display: inline-block;
@@ -173,7 +169,7 @@
 }
 
 .prices__article__info--not-include::before {
-  content: url("../../images/Close.svg");
+  content: url("../images/Close.svg");
   height: 11px;
   width: 11px;
   display: inline-block;
