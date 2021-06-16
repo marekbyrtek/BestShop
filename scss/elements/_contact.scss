@@ -114,11 +114,11 @@
   border-bottom-color: $color-primary;
 }
 
-.contact__form__checkbox {
+.form__checkbox {
   margin: 30px 0 20px;
 }
 
-.contact__form__checkbox {
+.form__checkbox {
   display: flex;
   font-family: $open-sans;
   font-weight: $font-regular;
@@ -161,4 +161,11 @@ input[type="checkbox"]:checked {
   border-radius: 35px;
   align-self: flex-end;
   border: none;
+}
+
+.consent__text {
+  margin: 0 10px;
+  font-size: 0.75rem;
+  color: $color-grey;
+  line-height: 17px;
 }

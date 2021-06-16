@@ -156,6 +156,73 @@
             </article>
         </div>
     </section>
+    <section class="calc">
+        <h2 class="calc__header">Calculate how much you’ll pay</h2>
+
+        <div class="calc__columns">
+            <form class="calc__form">
+                <div class="calc__input">
+                    <input type="number" class="form__input" id="products" min="1" step="1" placeholder="Products quantity"/>
+                </div>
+                <div class="calc__input">
+                    <input type="number" class="form__input" id="orders" min="1" step="1" placeholder="Estimated orders in month"/>
+                </div>
+                <div class="calc__select" id="package" data-value="">
+                    <div class="select__input">
+                        Choose package
+                    </div>
+
+                    <ul class="select__dropdown">
+                        <li data-value="basic">Basic</li>
+                        <li data-value="professional">Professional</li>
+                        <li data-value="premium">Premium</li>
+                    </ul>
+                </div>
+                <label class="form__checkbox">
+                    <input type="checkbox" id="accounting"/>
+                    <span class="checkbox"></span>
+                    <p class="consent__text">Accounting</p>
+                </label>
+                <label class="form__checkbox">
+                    <input type="checkbox" id="terminal"/>
+                    <span class="checkbox"></span>
+                    <p class="consent__text">Rental of a payment terminal</p>
+                </label>
+            </form>
+
+            <div class="calc__summary">
+                <ul>
+                    <li class="list__item" data-id="products">
+                        <span class="item__type">Products</span>
+                        <span class="item__calc">20 * $0.5</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                    <li class="list__item" data-id="orders">
+                        <span class="item__type">Orders</span>
+                        <span class="item__calc">20 * $0.5</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                    <li class="list__item" data-id="package">
+                        <span class="item__type">Package</span>
+                        <span class="item__calc">Premium</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                    <li class="list__item" data-id="accounting">
+                        <span class="item__type">Accounting</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                    <li class="list__item" data-id="terminal">
+                        <span class="item__type">Terminal</span>
+                        <span class="item__price">$10</span>
+                    </li>
+                </ul>
+                <div class="summary__total" id="total-price">
+                    <span>Total</span>
+                    <span class="total__price">$700</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contact" id="contact">
         <div class="contact__info">
             <h1 class="contact__info__header">Any questions?</h1>
@@ -170,10 +237,10 @@
             <input type="text" id="name" class="contact__form__input">
             <label for="email" class="contact__form__label">email</label>
             <input type="email" id="email" class="contact__form__input">
-            <label class="contact__form__checkbox">
+            <label class="form__checkbox">
                 <input type="checkbox">
                 <span></span>
-                I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+                <p class="consent__text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
             </label>
             <button type="submit" class="contact__form__btn">Send</button>
         </form>
