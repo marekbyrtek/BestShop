@@ -1213,7 +1213,7 @@ a {
 }
 .calc__select .select__input::after {
   content: "";
-  background-image: url("../assets/Arrow.svg");
+  background-image: url("../images/Arrow.svg");
   width: 22px;
   height: 22px;
   display: block;
